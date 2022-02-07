@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using Microsoft.Data.SqlClient;
 using System.Data.Common;
 
 Console.WriteLine("Hello, World!");
@@ -10,6 +11,9 @@ if ("Sql" == "Sql")
 {
     factory = Microsoft.Data.SqlClient.SqlClientFactory.Instance;
     conString = "Server=(localdb)\\mssqllocaldb;Database=Northwnd;Trusted_Connection=true";
+
+    SqlConnection con2 = new SqlConnection(conString);
+    var cmd2 = con2.CreateCommand();
 }
 else //postgres
 {
