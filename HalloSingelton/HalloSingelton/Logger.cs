@@ -4,19 +4,15 @@
     {
         private static Logger? _instance;
 
-        private static object _lock = new object();
+        private static readonly object _lock = new();
+
 
         public static Logger Instance
         {
             get
             {
                 lock (_lock)
-                {
-                    if (_instance == null)
-                        _instance = new Logger();
-                }
-
-                return _instance;
+                    return _instance ??= new Logger();
             }
         }
 
