@@ -5,6 +5,10 @@ VisualStudioVersion = 17.1.32127.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.BooksManager.Model", "ppedv.BooksManager.Model\ppedv.BooksManager.Model.csproj", "{4C48B393-4CA0-40AE-8ABC-ADF7D40B3645}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.BooksManager.Data.Ef", "ppedv.BooksManager.Data.Ef\ppedv.BooksManager.Data.Ef.csproj", "{4B0E360F-1F49-4E8D-886D-32200520A6DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.BooksManager.Data.Ef.Tests", "ppedv.BooksManager.Data.Ef.Tests\ppedv.BooksManager.Data.Ef.Tests.csproj", "{E304CE1E-6966-4178-97F5-13810DDCC49D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{4C48B393-4CA0-40AE-8ABC-ADF7D40B3645}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C48B393-4CA0-40AE-8ABC-ADF7D40B3645}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C48B393-4CA0-40AE-8ABC-ADF7D40B3645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B0E360F-1F49-4E8D-886D-32200520A6DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B0E360F-1F49-4E8D-886D-32200520A6DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B0E360F-1F49-4E8D-886D-32200520A6DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B0E360F-1F49-4E8D-886D-32200520A6DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E304CE1E-6966-4178-97F5-13810DDCC49D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E304CE1E-6966-4178-97F5-13810DDCC49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E304CE1E-6966-4178-97F5-13810DDCC49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E304CE1E-6966-4178-97F5-13810DDCC49D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
