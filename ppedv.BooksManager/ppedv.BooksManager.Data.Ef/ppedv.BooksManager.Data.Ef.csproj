@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ppedv.BooksManager.Contracts\ppedv.BooksManager.Contracts.csproj" />
     <ProjectReference Include="..\ppedv.BooksManager.Model\ppedv.BooksManager.Model.csproj" />
   </ItemGroup>
 

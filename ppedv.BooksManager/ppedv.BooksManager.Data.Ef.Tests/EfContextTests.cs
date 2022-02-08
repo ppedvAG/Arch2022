@@ -40,7 +40,7 @@ namespace ppedv.BooksManager.Data.Ef.Tests
 
             using (var con = new EfContext())
             {
-                var loadedBook = con.Books.Find(book.Id);
+                var loadedBook = con.Books?.Find(book.Id);
 
                 //Assert.Equal(book.Title, loadedBook.Title);
                 //loadedBook.Title.Should().Be(book.Title);
