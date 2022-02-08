@@ -3,6 +3,7 @@ using Autofac;
 using ppedv.BooksManager.Contracts;
 using ppedv.BooksManager.Data.Ef;
 using ppedv.BooksManager.Logic;
+using ppedv.BooksManager.Model;
 using System.Reflection;
 using Unity;
 
@@ -29,6 +30,12 @@ IUnityContainer container = new UnityContainer();
 container.RegisterType<IRepository, EfRepository>();
 
 var bms = new BooksManagerService(container.Resolve<IRepository>());
+
+
+foreach (var b in bms.Repository.Query<Book>().Where(x => x.Published.Year < 5000).OrderBy(x => x.Title.Length))
+{
+    Console.WriteLine($"{b.Title} {b.Published:d}");
+}
 
 var verlag = bms.GetPublisherWithMostExpensivesBooks();
 Console.WriteLine($"Der Verlag {verlag?.Name} hat in Summe die teuersten Bücher");

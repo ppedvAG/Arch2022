@@ -1,6 +1,7 @@
 using Moq;
 using ppedv.BooksManager.Contracts;
 using ppedv.BooksManager.Model;
+using System.Linq;
 using Xunit;
 
 namespace ppedv.BooksManager.Logic.Tests
@@ -22,18 +23,23 @@ namespace ppedv.BooksManager.Logic.Tests
         public void GetPublisherWithMostExpensivesBooks_2_books_one_is_more_expensive_results_in_publisher_1()
         {
             var mock = new Mock<IRepository>();
-            mock.Setup(x => x.GetAll<Book>()).Returns(() =>
+            mock.Setup(x => x.Query<Publisher>()).Returns(() =>
             {
                 var p1 = new Publisher() { Name = "P1" };
                 var b1 = new Book() { Price = 70m, Publisher = p1 };
                 var b11 = new Book() { Price = 70m, Publisher = p1 };
-                //p1.Books.Add(b1);
+                var b111 = new Book() { Price = 70m, Publisher = null };
+                p1.Books.Add(b1);
+                p1.Books.Add(b11);
+                p1.Books.Add(b111);
 
                 var p2 = new Publisher() { Name = "P2" };
                 var b2 = new Book() { Price = 20m, Publisher = p2 };
                 var b22 = new Book() { Price = 80m, Publisher = p2 };
-                //p2.Books.Add(b2);
-                return new[] { b1, b2, b11, b22 };
+                p2.Books.Add(b2);
+                p2.Books.Add(b22);
+
+                return new[] { p1, p2 }.AsQueryable();
             });
             var bms = new BooksManagerService(mock.Object);
 
