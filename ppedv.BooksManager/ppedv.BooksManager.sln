@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.BooksManager.Contract
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.BooksManager.UI.TestConsole", "ppedv.BooksManager.UI.TestConsole\ppedv.BooksManager.UI.TestConsole.csproj", "{57726403-71ED-41C4-B751-358DFAF73FD6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.BooksManager.Logic.Tests", "ppedv.BooksManager.Logic.Tests\ppedv.BooksManager.Logic.Tests.csproj", "{CFFBA3B7-1E19-47B7-B292-34A033CE1EE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{57726403-71ED-41C4-B751-358DFAF73FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57726403-71ED-41C4-B751-358DFAF73FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57726403-71ED-41C4-B751-358DFAF73FD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFFBA3B7-1E19-47B7-B292-34A033CE1EE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFFBA3B7-1E19-47B7-B292-34A033CE1EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFFBA3B7-1E19-47B7-B292-34A033CE1EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFFBA3B7-1E19-47B7-B292-34A033CE1EE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
