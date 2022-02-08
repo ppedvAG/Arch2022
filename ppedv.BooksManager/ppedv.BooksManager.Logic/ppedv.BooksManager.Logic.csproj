@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ppedv.BooksManager.Data.Ef\ppedv.BooksManager.Data.Ef.csproj" />
+    <ProjectReference Include="..\ppedv.BooksManager.Contracts\ppedv.BooksManager.Contracts.csproj" />
     <ProjectReference Include="..\ppedv.BooksManager.Model\ppedv.BooksManager.Model.csproj" />
   </ItemGroup>
 

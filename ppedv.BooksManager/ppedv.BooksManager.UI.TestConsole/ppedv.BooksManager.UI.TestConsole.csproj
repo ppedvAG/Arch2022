@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="Unity" Version="5.11.10" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ppedv.BooksManager.Contracts\ppedv.BooksManager.Contracts.csproj" />
     <ProjectReference Include="..\ppedv.BooksManager.Data.Ef\ppedv.BooksManager.Data.Ef.csproj" />
     <ProjectReference Include="..\ppedv.BooksManager.Logic\ppedv.BooksManager.Logic.csproj" />
