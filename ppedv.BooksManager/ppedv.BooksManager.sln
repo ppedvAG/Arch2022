@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.BooksManager.UI.WPF",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.BooksManager.UI.ASP_MVC", "ppedv.BooksManager.UI.ASP_MVC\ppedv.BooksManager.UI.ASP_MVC.csproj", "{88DB4C61-7C4E-4B55-B549-2BB21EBA2E02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.BooksManager.UI.Blazor", "ppedv.BooksManager.UI.Blazor\ppedv.BooksManager.UI.Blazor.csproj", "{DC9ED7BE-D3CC-4571-B5D3-EE0D55A910DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{88DB4C61-7C4E-4B55-B549-2BB21EBA2E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88DB4C61-7C4E-4B55-B549-2BB21EBA2E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88DB4C61-7C4E-4B55-B549-2BB21EBA2E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC9ED7BE-D3CC-4571-B5D3-EE0D55A910DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC9ED7BE-D3CC-4571-B5D3-EE0D55A910DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC9ED7BE-D3CC-4571-B5D3-EE0D55A910DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC9ED7BE-D3CC-4571-B5D3-EE0D55A910DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{CFFBA3B7-1E19-47B7-B292-34A033CE1EE8} = {854F800C-6010-4EE8-84AB-163BDCA7E91E}
 		{34D30A77-FB01-457B-A4D1-89F0562938C1} = {4D9E2BD4-83BD-45F2-BFDB-B9EAA618E713}
 		{88DB4C61-7C4E-4B55-B549-2BB21EBA2E02} = {4D9E2BD4-83BD-45F2-BFDB-B9EAA618E713}
+		{DC9ED7BE-D3CC-4571-B5D3-EE0D55A910DF} = {4D9E2BD4-83BD-45F2-BFDB-B9EAA618E713}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E79CE8E6-84AF-472F-98F4-5D26D8800F97}
