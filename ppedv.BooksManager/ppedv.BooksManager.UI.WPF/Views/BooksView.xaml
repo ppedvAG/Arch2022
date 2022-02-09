@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="ppedv.BooksManager.UI.WPF.Views.BooksView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ppedv.BooksManager.UI.WPF.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel>
+        <WrapPanel DockPanel.Dock="Top">
+            <Button>💾 Speichern</Button>
+            <Button>📄 Neu</Button>
+            <Button>☠️ Löschen</Button>
+            <Button>🔁 Laden</Button>
+        </WrapPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <DataGrid/>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label>Title</Label>
+                <TextBox Grid.Column="1"/>
+                <Label Grid.Row="1">Subtitle</Label>
+                <TextBox Grid.Row="1" Grid.Column="1"/>
+                <Label Grid.Row="2">Page Count</Label>
+                <TextBox Grid.Row="2" Grid.Column="1"/>
+                <Label Grid.Row="3">Published</Label>
+                <DatePicker Grid.Row="3" Grid.Column="1"/>
+                <Label Grid.Row="4">Published</Label>
+                <TextBox Grid.Row="4" Grid.Column="1"/>
+                <Label Grid.Row="5">Price</Label>
+                <TextBox Grid.Row="5" Grid.Column="1"/>
+                <Label Grid.Row="6">Publisher</Label>
+                <ComboBox Grid.Row="6" Grid.Column="1"/>
+                <GroupBox Header="Authors" Grid.Row="7" Grid.ColumnSpan="2">
+                    <ListBox/>
+                </GroupBox>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</UserControl>
