@@ -1,7 +1,10 @@
+using FluentValidation.AspNetCore;
+using ppedv.BooksManager.Logic;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<BooksValidator>());
 
 var app = builder.Build();
 

@@ -2,6 +2,7 @@
 {
     public class Book : Entity
     {
+  
         public string Title { get; set; } = string.Empty;
         public string SubTitle { get; set; } = string.Empty;
         public DateTime Published { get; set; }
