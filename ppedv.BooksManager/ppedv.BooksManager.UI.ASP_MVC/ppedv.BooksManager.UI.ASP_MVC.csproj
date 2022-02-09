@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.BooksManager.Contracts\ppedv.BooksManager.Contracts.csproj" />
+    <ProjectReference Include="..\ppedv.BooksManager.Data.Ef\ppedv.BooksManager.Data.Ef.csproj" />
+    <ProjectReference Include="..\ppedv.BooksManager.Logic\ppedv.BooksManager.Logic.csproj" />
+    <ProjectReference Include="..\ppedv.BooksManager.Model\ppedv.BooksManager.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.1" />
+  </ItemGroup>
+
+</Project>
