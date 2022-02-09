@@ -5,16 +5,16 @@ namespace ppedv.BooksManager.Logic
 {
     public class BooksManagerService
     {
-        public BooksManagerService(IRepository repo)
+        public BooksManagerService(IUnitOfWork uow)
         {
-            Repository = repo;
+            UnitOfWork = uow;
         }
 
-        public IRepository Repository { get; }
+        public IUnitOfWork UnitOfWork { get; }
 
         public Publisher? GetPublisherWithMostExpensivesBooks()
         {
-            var result = Repository.Query<Publisher>()
+            var result = UnitOfWork.GetBaseRepo<Publisher>().Query()
                                    .OrderByDescending(x => x.Books.Sum(b => b. Price))
                                    .FirstOrDefault();
 
