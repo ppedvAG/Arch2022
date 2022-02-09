@@ -8,7 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.BooksManager.Contracts\ppedv.BooksManager.Contracts.csproj" />
+    <ProjectReference Include="..\ppedv.BooksManager.Data.Ef\ppedv.BooksManager.Data.Ef.csproj" />
+    <ProjectReference Include="..\ppedv.BooksManager.Logic\ppedv.BooksManager.Logic.csproj" />
+    <ProjectReference Include="..\ppedv.BooksManager.Model\ppedv.BooksManager.Model.csproj" />
   </ItemGroup>
 
 </Project>

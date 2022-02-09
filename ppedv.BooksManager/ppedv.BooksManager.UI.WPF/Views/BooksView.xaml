@@ -4,11 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ppedv.BooksManager.UI.WPF.Views"
+             xmlns:viewmodels="clr-namespace:ppedv.BooksManager.UI.WPF.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <viewmodels:BooksViewModel/>
+    </UserControl.DataContext>
     <DockPanel>
         <WrapPanel DockPanel.Dock="Top">
-            <Button>💾 Speichern</Button>
+            <Button Command="{Binding SaveCommand}">💾 Speichern</Button>
             <Button>📄 Neu</Button>
             <Button>☠️ Löschen</Button>
             <Button>🔁 Laden</Button>
@@ -18,7 +22,11 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <DataGrid/>
+            <DataGrid ItemsSource="{Binding Books}" 
+                      SelectedItem="{Binding SelectedBook}"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      />
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -35,21 +43,26 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Label>Title</Label>
-                <TextBox Grid.Column="1"/>
+                <TextBox Grid.Column="1" Text="{Binding SelectedBook.Title}"/>
                 <Label Grid.Row="1">Subtitle</Label>
-                <TextBox Grid.Row="1" Grid.Column="1"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding SelectedBook.SubTitle}"/>
                 <Label Grid.Row="2">Page Count</Label>
-                <TextBox Grid.Row="2" Grid.Column="1"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding SelectedBook.PageCount}"/>
                 <Label Grid.Row="3">Published</Label>
-                <DatePicker Grid.Row="3" Grid.Column="1"/>
-                <Label Grid.Row="4">Published</Label>
-                <TextBox Grid.Row="4" Grid.Column="1"/>
+                <DockPanel Grid.Row="3" Grid.Column="1">
+                    <TextBlock Text="{Binding PublishedYearInfo,FallbackValue='Vor XX Jahren'}" 
+                               VerticalAlignment="Center"  DockPanel.Dock="Left"/>
+                    <DatePicker  SelectedDate="{Binding PublishedDate,UpdateSourceTrigger=PropertyChanged}"/>
+                </DockPanel>
+
+                <Label Grid.Row="4">ISBN</Label>
+                <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding SelectedBook.ISBN}"/>
                 <Label Grid.Row="5">Price</Label>
-                <TextBox Grid.Row="5" Grid.Column="1"/>
+                <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding SelectedBook.Price}"/>
                 <Label Grid.Row="6">Publisher</Label>
-                <ComboBox Grid.Row="6" Grid.Column="1"/>
+                <ComboBox Grid.Row="6" Grid.Column="1" SelectedItem="{Binding SelectedBook.Publisher}" DisplayMemberPath="Name"/>
                 <GroupBox Header="Authors" Grid.Row="7" Grid.ColumnSpan="2">
-                    <ListBox/>
+
                 </GroupBox>
             </Grid>
         </Grid>
